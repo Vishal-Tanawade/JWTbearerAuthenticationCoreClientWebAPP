@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Index">
+        <form asp-action="Login" asp-controller="JWTClient" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
@@ -26,11 +26,15 @@
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+        <h2>@Html.Raw(@ViewBag.Message)</h2>
     </div>
 </div>
+<div class="display-4">
+    Serialization is the process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or a file. Its main purpose is to save the state of an object in order to be able to recreate it when needed. The reverse process is called deserialization
 
+</div>
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="SignUp" class="btn-info btn-sm">Sign Up</a>
 </div>
 
 @section Scripts {
