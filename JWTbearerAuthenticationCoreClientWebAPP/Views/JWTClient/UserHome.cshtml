@@ -5,3 +5,19 @@
 
 <h1>UserHome</h1>
 
+<form method="post">
+    <button type="submit" asp-action="Login"
+            asp-controller="JWTClient">
+        Sign In
+    </button>
+    <button type="submit" asp-action="Logout"
+            asp-controller="JWTClient">
+        Sign Out
+    </button>
+    <button type="submit" asp-action="ShowData"
+            asp-controller="JWTClient">
+        Show Data
+    </button>
+    <h2>@Html.Raw(@ViewBag.Message)</h2>
+</form>
+
