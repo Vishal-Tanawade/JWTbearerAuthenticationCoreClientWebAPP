@@ -28,8 +28,8 @@ namespace JWTbearerAuthenticationCoreClientWebAPP.Controllers
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(userModel), Encoding.UTF8, "application/json");
 
-
-                using (var response = await httpClient.PostAsync("http://localhost:1635/api/JWTUserrAuthService/Authenticate/", content))
+                //http://localhost:60888/api/JWTUserrAuthService/authenticate
+                using (var response = await httpClient.PostAsync("http://localhost:60888/api/JWTUserrAuthService/authenticate/", content))
                 {
                     //string apiResponse = await response.Content.ReadAsStringAsync();
 
@@ -67,7 +67,7 @@ namespace JWTbearerAuthenticationCoreClientWebAPP.Controllers
         // GET: JWTClientController/ShowData
         public IActionResult ShowData()
         {
-            string baseUrl = "http://localhost:1635/";
+            string baseUrl = "http://localhost:60888/";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(baseUrl);
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
